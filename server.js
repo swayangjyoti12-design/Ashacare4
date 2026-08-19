@@ -693,12 +693,14 @@ function openAtlas() {
       const card = document.createElement('div');
       card.style.cssText = 'border: 1px solid var(--border); border-radius: 8px; padding: 1rem; background: #f8fafc; text-align: center; cursor: pointer; transition: all 0.2s;';
       card.onclick = () => selectFromAtlas(key);
-      card.innerHTML = `
-        <div style="font-size: 2.2rem; margin-bottom: 0.5rem;">${item.visualAtlas.icon}</div>
-        <strong style="color: var(--primary-dark); font-size: 0.95rem; display:block;">${titleText}</strong>
-        <p style="font-size: 0.8rem; color: #475569; margin-top: 0.4rem; line-height:1.4;">${descText}</p>
-        <span class="btn" style="margin-top:0.75rem; padding: 0.3rem 0.6rem; font-size: 0.75rem; width:100%; justify-content:center;">${t.selectSymptom}</span>
-      `;
+        card.innerHTML = `
+    <div style="font-size: 2.2rem; margin-bottom: 0.5rem;">${item.visualAtlas.icon}</div>
+    <strong style="color: var(--primary-dark); font-size: 0.95rem; display:block;">${titleText}</strong>
+    <p style="font-size: 0.8rem; color: #475569; margin-top: 0.4rem; line-height:1.4;">${descText}</p>
+    <span class="btn" style="margin-top: 0.75rem; padding: 0.3rem 0.6rem; font-size: 0.75rem; width:100%;">Select Symptom</span>
+  `;
+
+        
       grid.appendChild(card);
     }
   });
